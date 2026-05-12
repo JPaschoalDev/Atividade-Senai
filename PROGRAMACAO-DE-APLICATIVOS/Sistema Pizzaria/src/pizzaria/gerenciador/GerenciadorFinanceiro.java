@@ -106,19 +106,19 @@ public class GerenciadorFinanceiro {
     public String gerarRelatorio(LocalDate data) {
         int ano = data.getYear();
         StringBuilder sb = new StringBuilder();
-        sb.append("\n╔══════════════════════════════════════╗\n");
-        sb.append("║       RELATÓRIO FINANCEIRO           ║\n");
-        sb.append("╠══════════════════════════════════════╣\n");
-        sb.append(String.format("║  Data de referência: %-17s║\n", data.toString()));
-        sb.append("╠══════════════════════════════════════╣\n");
-        sb.append(String.format("║  Faturamento HOJE:    R$ %10.2f ║\n", faturamentoDiario(data)));
-        sb.append(String.format("║  Pedidos hoje:        %13d ║\n", totalPedidosDia(data)));
-        sb.append(String.format("║  Ticket médio hoje:   R$ %10.2f ║\n", ticketMedioDia(data)));
-        sb.append("╠══════════════════════════════════════╣\n");
-        sb.append(String.format("║  Faturamento SEMANAL: R$ %10.2f ║\n", faturamentoSemanal(data)));
-        sb.append("╠══════════════════════════════════════╣\n");
-        sb.append(String.format("║  Faturamento ANUAL %d: R$ %10.2f ║\n", ano, faturamentoAnual(ano)));
-        sb.append("╚══════════════════════════════════════╝\n");
+        sb.append("\n+======================================+\n");
+        sb.append("|       RELATORIO FINANCEIRO           |\n");
+        sb.append("+======================================+\n");
+        sb.append(String.format("|  Data de referencia: %-17s|\n", data.toString()));
+        sb.append("+--------------------------------------+\n");
+        sb.append(String.format("|  Faturamento HOJE:    R$ %10.2f |\n", faturamentoDiario(data)));
+        sb.append(String.format("|  Pedidos hoje:        %13d |\n", totalPedidosDia(data)));
+        sb.append(String.format("|  Ticket medio hoje:   R$ %10.2f |\n", ticketMedioDia(data)));
+        sb.append("+--------------------------------------+\n");
+        sb.append(String.format("|  Faturamento SEMANAL: R$ %10.2f |\n", faturamentoSemanal(data)));
+        sb.append("+--------------------------------------+\n");
+        sb.append(String.format("|  Faturamento ANUAL %d: R$ %10.2f |\n", ano, faturamentoAnual(ano)));
+        sb.append("+======================================+\n");
         return sb.toString();
     }
 

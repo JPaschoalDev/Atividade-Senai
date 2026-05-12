@@ -45,9 +45,9 @@ public class Main {
     // PONTO DE ENTRADA
     // -------------------------
     public static void main(String[] args) {
-        System.out.println("╔══════════════════════════════════╗");
-        System.out.println("║   🍕  SISTEMA PIZZARIA v1.0     ║");
-        System.out.println("╚══════════════════════════════════╝");
+        System.out.println("+==================================+");
+        System.out.println("|   ** SISTEMA PIZZARIA v1.0 **   |");
+        System.out.println("+==================================+");
 
         boolean executando = true;
 
@@ -70,7 +70,7 @@ public class Main {
                 case 4 -> menuPromocoes();
                 case 5 -> menuFinanceiro();
                 case 0 -> {
-                    System.out.println("\nAté logo! 🍕");
+                    System.out.println("\nAté logo!");
                     executando = false;
                 }
                 default -> System.out.println("  ⚠ Opção inválida.");
@@ -426,16 +426,9 @@ public class Main {
     // MENU: FINANCEIRO
     // =========================================================
     static void menuFinanceiro() {
-        Console.titulo("RELATÓRIO FINANCEIRO");
-
-        // Usa a data de hoje como referência padrão
         LocalDate hoje = LocalDate.now();
         System.out.println(gerFinanceiro.gerarRelatorio(hoje));
 
-        System.out.println("  Dica: para ver o relatório de outra data,");
-        System.out.println("  altere 'LocalDate.now()' no código (exercício!).\n");
-
-        // Exibe todos os pedidos do sistema para referência
         Console.separador();
         System.out.println("Todos os pedidos registrados:");
         List<Pedido> todos = gerPedidos.listarTodos();
