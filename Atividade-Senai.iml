@@ -3,7 +3,7 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_25" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/PROGRAMACAO-DE-APLICATIVOS/Sistema Clone iFood/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PROGRAMACAO-DE-APLICATIVOS/Sistema Pizzaria/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PROGRAMACAO-DE-APLICATIVOS/Sistema de Cooperativa/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
