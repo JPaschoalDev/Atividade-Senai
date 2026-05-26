@@ -143,4 +143,19 @@ public class TarefaController {
             return false;
         }
     }
+
+    /**
+     * LISTA AS TAREFAS POR STATUS
+     * @param usuarioId — id do usuário logado
+     * @param status — status para filtrar (PENDENTE, ATRASADA ou CONCLUIDA)
+     * @return lista de tarefas filtradas, ou lista vazia se der erro
+     */
+    public List<Tarefa> listarPorStatus(int usuarioId, Tarefa.StatusTarefa status) {
+        try {
+            return tarefaDAO.listarPorStatus(usuarioId, status);
+        } catch (SQLException e) {
+            System.out.println("❌ Erro ao filtrar tarefas: " + e.getMessage());
+            return Collections.emptyList();
+        }
+    }
 }
