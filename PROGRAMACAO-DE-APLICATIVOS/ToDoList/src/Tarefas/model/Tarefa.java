@@ -1,21 +1,33 @@
 package Tarefas.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 // CLASSE "Tarefa" PARA GERENCIAR AS TAREFAS DO SISTEMA
 public class Tarefa {
+
+    // ENUM PARA GERENCIAR O STATUS DAS TAREFAS
+    public enum StatusTarefa {
+        PENDENTE,
+        ATRASADA,
+        CONCLUIDA
+    }
 
     // ATRIBUTOS PRIVADOS DA CLASSE TAREFA
     private int id;
     private String titulo;
-    private boolean concluida;
-    private String dataCriacao;
+    private String descricao;
+    private StatusTarefa status;
+    private LocalDateTime dataCriacao;
     private int usuarioId;
 
     // CONSTRUTOR PARA CRIAR NOVAS TAREFAS
-    public Tarefa(String titulo, int usuarioId) {
-        this.titulo = titulo;
+    public Tarefa(String titulo, String descricao, int usuarioId) {
+        this.setTitulo(titulo);
+        this.setDescricao(descricao);
         this.usuarioId = usuarioId;
-        this.concluida = false;
-        this.dataCriacao = java.time.LocalDateTime.now().toString();
+        this.status = StatusTarefa.PENDENTE;
+        this.dataCriacao = LocalDateTime.now();
     }
 
     // CONSTRUTOR VAZIO PARA USO EM CASOS ESPECÍFICOS
@@ -40,19 +52,29 @@ public class Tarefa {
         this.titulo = titulo.trim();
     }
 
-    // GETTER E SETTER CONCLUÍDA
-    public boolean isConcluida() {
-        return concluida;
+    // GETTER E SETTER DESCRIÇÃO
+    public String getDescricao() {
+        return descricao;
     }
-    public void setConcluida(boolean concluida) {
-        this.concluida = concluida;
+    public void setDescricao(String descricao) {
+        if (descricao == null || descricao.isBlank()) throw new IllegalArgumentException("DESCRIÇÃO DA TAREFA NÃO PODE SER VAZIA.");
+        this.descricao = descricao.trim();
+    }
+
+    // GETTER E SETTER STATUS
+    public StatusTarefa getStatus() {
+        return status;
+    }
+    public void setStatus(StatusTarefa status) {
+        if (status == null) throw new IllegalArgumentException("STATUS DA TAREFA NÃO PODE SER NULO.");
+        this.status = status;
     }
 
     // GETTER E SETTER DATA DE CRIAÇÃO
     public String getDataCriacao() {
-        return dataCriacao;
+        return dataCriacao.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
     }
-    public void setDataCriacao(String dataCriacao) {
+    public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 
