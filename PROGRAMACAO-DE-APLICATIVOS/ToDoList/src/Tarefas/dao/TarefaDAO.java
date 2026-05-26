@@ -70,7 +70,7 @@ public class TarefaDAO {
         }
     }
 
-    public boolean atualizarTituloEDescricao(int id, String novoTitulo, String novaDescricao) throws SQLException {
+    public boolean atualizar(int id, String novoTitulo, String novaDescricao) throws SQLException {
         String sql = "UPDATE tarefas SET titulo = ?, descricao = ? WHERE id = ?";
 
         try (Connection conn = ConexaoDB.getConexao();
