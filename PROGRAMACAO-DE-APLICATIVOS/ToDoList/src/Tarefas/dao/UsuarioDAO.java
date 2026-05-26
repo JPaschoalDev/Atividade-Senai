@@ -1,6 +1,8 @@
 package Tarefas.dao;
 
 import Tarefas.model.Usuario;
+
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,5 +21,28 @@ public class UsuarioDAO {
 
             stmt.executeUpdate();
         }
+    }
+
+    public Usuario buscarPorEmail(String email) throws SQLException {
+        String sql = "SELECT id, nome, email, senha FROM usuarios WHERE email = ?";
+
+        try (Connection conn = ConexaoDB.getConexao();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, email);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    Usuario usuario = new Usuario();
+                    usuario.setId(rs.getInt("id"));
+                    usuario.setNome(rs.getString("nome"));
+                    usuario.setEmail(rs.getString("email"));
+                    usuario.setSenha(rs.getString("senha"));
+                    return usuario;
+                }
+            }
+        }
+
+        return null;
     }
 }
