@@ -11,7 +11,7 @@ Aplicação console em Java para cadastro, autenticação de usuários e gerenci
 | Aluno | GitHub |
 |---|---|
 | João Victor Paschoal | [@JPaschoalDev](https://github.com/JPaschoalDev) |
-| Kerllom | — |
+| Kerllom | [@Kerllom Luis](https://github.com/Kerllom) |
 
 ---
 
