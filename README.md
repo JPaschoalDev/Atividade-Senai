@@ -33,10 +33,12 @@ Cada módulo possui sua própria pasta, organizada de forma clara para facilitar
 ## 📁 Estrutura do Repositório
 
 ```
-📦 atividades-senai/
+📦 Atividades-ASenai/
 ├── 📂 PROGRAMACAO-DE-APLICATIVOS/  # Módulo: Programação de Aplicativos
 │   ├── atividade-01/
-│   ├── atividade-02/
+│   └── ...
+├── 📂 DESENVOLVIMENTO-DE-SISTEMAS/  # Módulo: Desenvolvimento de Sistemas
+│   ├── atividade-01/
 │   └── ...
 └── README.md
 ```
@@ -70,29 +72,6 @@ Atividades e projetos do módulo de Desenvolvimento de Sistemas, abrangendo o de
 |-------------------------------|-----------------|
 | Programação de Aplicativos    | 🟢 Concluído    |
 | Desenvolvimento de Sistemas   | 🟡 Em Andamento |
-
----
-
-## 📝 Convenção de Commits
-
-Para manter o histórico organizado, os commits seguem o padrão:
-
-```
-<tipo>(<disciplina>): <descrição breve>
-```
-
-**Exemplos:**
-```
-feat(prog-app): adiciona atividade de interfaces gráficas
-fix(prog-app): corrige lógica do exercício 03
-docs(prog-app): adiciona descrição da atividade 02
-```
-
-**Tipos utilizados:**
-- `feat` — nova atividade ou funcionalidade
-- `fix` — correção de erro
-- `docs` — atualização de documentação
-- `refactor` — refatoração de código
 
 ---
 
