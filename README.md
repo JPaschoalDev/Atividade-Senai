@@ -48,6 +48,9 @@ Cada módulo possui sua própria pasta, organizada de forma clara para facilitar
 ### 📱 Programação de Aplicativos
 Atividades e projetos do módulo de Programação de Aplicativos, abrangendo o desenvolvimento de soluções de software com foco em lógica, estrutura e boas práticas de programação.
 
+### 📱 Desenvolvimento de Sistemas
+Atividades e projetos do módulo de Desenvolvimento de Sistemas, abrangendo o desenvolvimento de soluções de software com foco em lógica, estrutura e boas práticas de programação.
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -65,7 +68,8 @@ Atividades e projetos do módulo de Programação de Aplicativos, abrangendo o d
 
 | Módulo                        | Status          |
 |-------------------------------|-----------------|
-| Programação de Aplicativos    | 🟡 Em Andamento |
+| Programação de Aplicativos    | 🟢 Concluído    |
+| Desenvolvimento de Sistemas   | 🟡 Em Andamento |
 
 ---
 
