@@ -33,7 +33,7 @@ Cada módulo possui sua própria pasta, organizada de forma clara para facilitar
 ## 📁 Estrutura do Repositório
 
 ```
-📦 Atividades-ASenai/
+📦 Atividades-Senai/
 ├── 📂 PROGRAMACAO-DE-APLICATIVOS/  # Módulo: Programação de Aplicativos
 │   ├── atividade-01/
 │   └── ...
